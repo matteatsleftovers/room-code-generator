@@ -1,0 +1,39 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: lightyellow;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+  padding: 1rem;
+}
+
+a {
+  margin-top: 1rem;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+#roomCodeParagraph {
+  font-size: larger;
+  font-weight: 600;
+}

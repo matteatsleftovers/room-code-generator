@@ -2,12 +2,15 @@
 <html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Room | Room Code Generator</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello, new room!</h1>
     <p>The room code is this:</p>
     <p id="roomCodeParagraph">banjo-kazoo-trombone</p>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script type="application/javascript" src="roomCodeGenerator.js"></script>
     <script>
       const roomCode = generateRoomCode();
@@ -15,6 +18,17 @@
       roomCodeParagraph.textContent = roomCode;
       document.title = `New Room | ${roomCode}`;
       history.replaceState(null, "", roomCode);
+      // Cheating——I mean celebrating!——with effects from canvas-confetti, thanks @catdad! https://github.com/catdad/canvas-confetti/
+      confetti({
+        particleCount: 100,
+        startVelocity: 30,
+        spread: 360,
+        origin: {
+          x: Math.random(),
+          // since they fall down, start a bit higher than random
+          y: Math.random() - 0.2,
+        },
+      });
     </script>
   </body>
 </html>
